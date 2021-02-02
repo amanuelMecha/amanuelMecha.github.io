@@ -56,39 +56,53 @@
         <h3>New Book Form</h3>
         <p> <b>Note:</b> Form fields marked with asterisk(*) are required.</p>
         <div class="forms">
-            <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">* Book title</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                </div>
+            <form id="editBookForm">
+                </fieldset>
+                <input id="bookId" type="hidden" name="bookId" value="" />
                 <div class="row">
-                    <div class="col">
-                        <label for="formGroupExampleInput">* ISBN</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="col">
-                        <label for="formGroupExampleInput">* Over due fee per day</label>
-                        <input type="number" class="form-control" placeholder="0.00">
-                        Enter a valid decimal in dollars and cents ; no comma(e.g. 1.99)
-
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">* Book Title</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput"
+                                placeholder="Enter book title" value="required">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <label for="formGroupExampleInput">* Publisher</label>
-                        <input type="text" class="form-control" placeholder="">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">* ISBN</label>
+                            <input type="text" class="form-control" placeholder="" value="required">
+                        </div>
                     </div>
-                    <div class="col">
-                        <label for="formGroupExampleInput">* Date Published</label>
-                        <input type="date" class="form-control" placeholder="mm/dd/yyyy"><br>
-                        <button type="button" class="btn btn btn-danger">Reset</button>
-                        <button type="button" class="btn btn btn-success">Save Book</button>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">* Over due fee per day</label>
+                            <input type="number" class="form-control" placeholder="0.00">
+                            <small id="overdue" class="form-text- text-muted">Enter a valid decimal amount, in dollars
+                                and cents; no comma(e.g. 1.99)</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form group">
+                                <label for="formGroupExampleInput">* Publisher</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form group">
+                                <label for="formGroupExampleInput">* Date Published</label>
+                                <input type="date" class="form-control" placeholder="mm/dd/yyyy"><br>
+                                <button type="button" class="btn btn btn-danger">Reset</button>
+                                <button type="button" class="btn btn btn-success">Save Book</button>
 
-                    </div>
-                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+
             </form>
         </div>
-    </div>
 </body>
 
 </html>

@@ -1,10 +1,11 @@
 
 window.onload = function () {
     const display = document.querySelector('#outlet');
-    bookPage();
-    function bookPage() {
-        fetchLibraryApi()
-    }
+    // bookPage();
+    // function bookPage() {
+    //     fetchLibraryApi()
+    // }
+    fetchLibraryApi()
     async function fetchLibraryApi() {
         const response = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list", {
             method: 'GET'
@@ -12,6 +13,7 @@ window.onload = function () {
         const respondBody = await response.json();
         console.log(respondBody);
         buildTable(respondBody)
+
         function buildTable(data) {
             var table = document.getElementById("myTable")
             for (var i = 0; i < data.length; i++) {
