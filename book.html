@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The CityLibrary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script defer src="book.js"></script>
+
+    <style>
+        /* Modify the background color */
+
+        .navbar-inverse {
+            background-color: rgb(8, 91, 247);
+        }
+
+        h3 {
+            color: #008CBA;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        div.body {
+            width: 900px;
+            margin: 0.9em auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">The CityLibrary® ::: a CS418 WebApp project |</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About Us |</a></li>
+                    <li><a href="virtualtour.html">Virtual Tour |</a></li>
+                    <li><a href="book.html">Books</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span></span> Welcome, Guest</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="body">
+        <h3>Books in our Collection</h3>
+        <div class="nav navbar-nav navbar-right">
+            <a href="addBook.html" class="btn btn-info" role="button">Add New Book</a>
+        </div>
+        <div id="outlet"></div>
+        <table class="table table-striped">
+            <tr class="big-info">
+                <th>#</th>
+                <th>ISBN</th>
+                <th>Book Title</th>
+                <th>Overdue Fee</th>
+                <th>Publisher</th>
+                <th>Date Published</th>
+            </tr>
+            <tbody id="myTable"></tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
