@@ -1,0 +1,17 @@
+.navbar-inverse {
+    background-color: rgb(8, 91, 247);
+}
+
+h3 {
+    color: #008CBA;
+}
+
+a {
+    text-decoration: none;
+    color: #008CBA;
+}
+
+div.body {
+    width: 900px;
+    margin: 0.9em auto;
+}

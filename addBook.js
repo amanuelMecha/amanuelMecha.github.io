@@ -13,14 +13,11 @@ async function save() {
             "datePublished": document.querySelector('#dateplace').value
         })
     })
-
     const respBody = await response2.json();
     console.log(`amanuel best` + respBody.bookId);
-
     if (respBody.bookId == null) {
     } else {
         alert(`Book successfully added! `)
-        // document.querySelector('#addBook').innerHTML = addBook.html;
     }
     setTimeout(_ => {
         location.replace("addBook.html")

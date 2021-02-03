@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="new.css" media="screen" />
-    <script defer src="addBook.js"></script>
+    <script defer src="edit.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         </div>
     </nav>
     <div class="body">
-        <h3>New Book Form</h3>
+        <h3>Edit Book Form</h3>
         <p> <b>Note:</b> Form fields marked with asterisk(*) are required.</p>
         <div class="forms">
             <form id="formjs" method="GET">
@@ -48,7 +48,7 @@
                         <div class="col-md-6">
 
                             <label for="isbn">* ISBN</label>
-                            <input type="text" class="form-control" placeholder="" id="isbn" required>
+                            <input type="text" class="form-control" value=`${data[i].isbn}` id="isbn" required>
                         </div>
                     </div>
                     <div class="col-md-6">
