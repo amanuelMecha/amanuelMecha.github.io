@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const display = document.querySelector('#outlet');
+        async function save() {
+            const response2 = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", {
+                method: 'POST',
+                headers: {
+                    // 'Accept': "application/json",
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "isbn": "test",
+                    "title": "test file new ",
+                    "overdueFee": 0.99,
+                    "publisher": "test final new",
+                    "datePublished": "2021-10-21"
+                })
+            })
+            const respBody = await response2.json();
+            console.log(respBody);
+        }
+    </script>
+</body>
+
+</html>

@@ -18,19 +18,25 @@ window.onload = function () {
             var table = document.getElementById("myTable")
             for (var i = 0; i < data.length; i++) {
                 var row = `<tr>
-                                    <td>${i + 1}</td>
-                                    <td>${data[i].datePublished}</td>
+                                    <td>${i + 1}</td>                                   
                                     <td>${data[i].isbn}</td>
-                                    <td>${data[i].overdueFee}</td>
-                                    <td>${data[i].publisher}</td>
                                     <td>${data[i].title}</td>
+                                    <td>${data[i].overdueFee}</td>
+                                    <td>${data[i].publisher}</td>                                    
+                                    <td>${data[i].datePublished}</td>
+                                    <td><button>edit</button></td>
+                                    <td><button>delete</button></td>
                                    </tr>`
                 table.innerHTML += row
             }
             //data[i].bookId
         }
 
-
     }
-    var addBook = document.getElementById("add")
+
+
+    // const saveB = document.querySelector('#saveId');
+    //     saveB.addEventListener('click', save);
+
+
 };
