@@ -1,4 +1,3 @@
-
 async function save() {
     const response2 = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", {
         method: 'POST',
@@ -8,13 +7,23 @@ async function save() {
         },
         body: JSON.stringify({
             "isbn": document.querySelector('#isbn').value,
-            "title": document.querySelector("#formGroupExampleInput").value,
+            "title": document.querySelector("#bookTitle").value,
             "overdueFee": document.querySelector('#overdueday').value,
             "publisher": document.querySelector('#published').value,
             "datePublished": document.querySelector('#dateplace').value
         })
     })
-    alert(`Book succesfully added `)
+
     const respBody = await response2.json();
-    console.log(respBody);
+    console.log(`amanuel best` + respBody.bookId);
+
+    if (respBody.bookId == null) {
+    } else {
+        alert(`Book successfully added! `)
+        // document.querySelector('#addBook').innerHTML = addBook.html;
+    }
+    setTimeout(_ => {
+        location.replace("addBook.html")
+    }, 1000)
+
 }
