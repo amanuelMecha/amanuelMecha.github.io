@@ -5,6 +5,7 @@ window.onload = function () {
         const response = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list", {
             method: 'GET'
         })//data[i].bookId
+        console.log(`Amani is best developer`)
         const respondBody = await response.json();
         console.log(respondBody);
         buildTable(respondBody)
