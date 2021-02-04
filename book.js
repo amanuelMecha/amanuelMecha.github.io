@@ -12,7 +12,7 @@ window.onload = function () {
             var table = document.getElementById("myTable")
             for (var i = 0; i < data.length; i++) {
                 var row = `<tr>
-                                    <td>${data[i].bookId}</td>                                   
+                                    <td>${i + 1}</td>                                   
                                     <td>${data[i].isbn}</td>
                                     <td>${data[i].title}</td>
                                     <td>${data[i].overdueFee}</td>
