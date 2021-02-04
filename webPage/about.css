@@ -11,7 +11,8 @@ a {
     color: #008CBA;
 }
 
-div.body {
+h3,
+p {
     width: 900px;
-    margin: 0.9em auto;
+    margin: 1em auto;
 }

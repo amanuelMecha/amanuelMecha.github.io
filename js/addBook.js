@@ -15,7 +15,8 @@ async function save() {
     })
     const respBody = await response2.json();
     console.log(`amanuel best` + respBody.bookId);
-    if (respBody.bookId == null) {
+    if (respBody.bookId == null && respBody.title == null && respBody.isbn == null && respBody.overdueFee == null && respBody.publisher == null && respBody.datePublished ==null)  {
+        alert(`Enter data on the required form `)
     } else {
         alert(`Book successfully added! `)
     }

@@ -89,7 +89,7 @@ async function updatebookform(bookid) {
                 "datePublished": `${datePublished}`
             })
         })
-
+        
 
         $('#succesalert').fadeIn(500)
         setTimeout(function () {
@@ -108,7 +108,7 @@ async function updatebookform(bookid) {
     setTimeout(_ => {
         location.reload('book.html')
     })
-
+    // history.pushState({ 'page': 1 }, null, '/book.html');
 
 }
 
