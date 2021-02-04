@@ -5,6 +5,6 @@ async function bookDelete(x) {
     })
     setInterval(_ => {
         location.replace("book.html")
-    }, 0)
+    })
     // console.log(x)
 }

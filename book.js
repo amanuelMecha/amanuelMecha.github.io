@@ -11,7 +11,6 @@ window.onload = function () {
         function buildTable(data) {
             var table = document.getElementById("myTable")
             for (var i = 0; i < data.length; i++) {
-                let x = data[i].bookId;
                 var row = `<tr>
                                     <td>${data[i].bookId}</td>                                   
                                     <td>${data[i].isbn}</td>
@@ -19,7 +18,8 @@ window.onload = function () {
                                     <td>${data[i].overdueFee}</td>
                                     <td>${data[i].publisher}</td>                                    
                                     <td>${data[i].datePublished}</td>
-                                    <td><button>edit</button></td>
+                                    
+                                    <td><a  href='book.html' onclick='editBookForm(${data[i].bookId})'>edit</a></td>
                                     <td ><button onclick='bookDelete(${data[i].bookId})'>delete</button></td>
                                    </tr>`
                 table.innerHTML += row
@@ -27,4 +27,5 @@ window.onload = function () {
         }
 
     }
+
 };

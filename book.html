@@ -10,49 +10,50 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script defer src="book.js"></script>
     <script defer src="delete.js"></script>
-    <link rel="stylesheet" type="text/css" href="new.css" media="screen" />
+    <script defer src="editUpdate.js"></script>
+    <link rel="stylesheet" type="text/css" href="addBook.css" media="screen" />
 </head>
 
 <body>
+    <div class="jumbotron">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">The CityLibrary® ::: a CS418 WebApp project |</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="about.html">About Us |</a></li>
+                        <li><a href="virtualtour.html">Virtual Tour |</a></li>
+                        <li><a href="book.html">Books</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html"><span></span> Welcome, Guest</a></li>
+                    </ul>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">The CityLibrary® ::: a CS418 WebApp project |</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="about.html">About Us |</a></li>
-                    <li><a href="virtualtour.html">Virtual Tour |</a></li>
-                    <li><a href="book.html">Books</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html"><span></span> Welcome, Guest</a></li>
-                </ul>
+                </div>
 
             </div>
+        </nav>
+        <div class="body">
+            <h3>Books in our Collection</h3>
+            <div class="nav navbar-nav navbar-right">
+                <a href="addBook.html" class="btn btn-info" role="button">Add New Book</a>
+            </div>
+            <div id="outlet"></div>
+            <table class="table table-striped">
+                <tr class="big-info">
+                    <th>#</th>
+                    <th>ISBN</th>
+                    <th>Book Title</th>
+                    <th>Overdue Fee</th>
+                    <th>Publisher</th>
+                    <th>Date Published</th>
+                </tr>
+                <tbody id="myTable"></tbody>
+            </table>
 
         </div>
-    </nav>
-    <div class="body">
-        <h3>Books in our Collection</h3>
-        <div class="nav navbar-nav navbar-right">
-            <a href="addBook.html" class="btn btn-info" role="button">Add New Book</a>
-        </div>
-        <div id="outlet"></div>
-        <table class="table table-striped">
-            <tr class="big-info">
-                <th>#</th>
-                <th>ISBN</th>
-                <th>Book Title</th>
-                <th>Overdue Fee</th>
-                <th>Publisher</th>
-                <th>Date Published</th>
-            </tr>
-            <tbody id="myTable"></tbody>
-        </table>
-
-    </div>
 </body>
 
 </html>
