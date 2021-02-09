@@ -14,9 +14,21 @@ async function save() {
         })
     })
     const respBody = await response2.json();
+    var x = respBody.bookId;
     console.log(`amanuel best` + respBody.bookId);
-    if (respBody.bookId == null && respBody.title == null && respBody.isbn == null && respBody.overdueFee == null && respBody.publisher == null && respBody.datePublished ==null)  {
+    if (respBody.bookId == null || respBody.title == null || respBody.isbn == null || respBody.overdueFee == null || respBody.publisher == null || respBody.datePublished == null) {
         alert(`Enter data on the required form `)
+        bookDelete(x)
+        async function bookDelete(x) {
+            const response = await fetch(`https://elibraryrestapi.herokuapp.com/elibrary/api/book/delete/${x}`, {
+                method: 'DELETE'
+            })
+            setInterval(_ => {
+                location.replace("book.html")
+            })
+            // console.log(x)
+        }
+
     } else {
         alert(`Book successfully added! `)
     }
